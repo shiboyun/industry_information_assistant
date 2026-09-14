@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="480" fill="#ffffff"/>
+
+  <text x="470" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f1f1f">图 4-2  消融实验：关闭各组件后，其负责类别的召回率变化</text>
+  <text x="470" y="58" text-anchor="middle" font-size="13" fill="#8c8c8c">逐个关闭组件并复测，每个组件所负责的攻击类别召回率均降至 0%——各机制不可相互替代</text>
+
+  <!-- 图例 -->
+  <g font-size="12.5">
+    <rect x="290" y="76" width="16" height="12" fill="#1677ff"/>
+    <text x="313" y="87" fill="#595959">完整系统</text>
+    <rect x="400" y="76" width="16" height="12" fill="#d9d9d9"/>
+    <text x="423" y="87" fill="#595959">关闭该组件后</text>
+  </g>
+
+  <!-- 基线 -->
+  <line x1="280" y1="100" x2="860" y2="100" stroke="#bfbfbf" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- 行 1：跨阶段污点传播 -->
+  <g>
+    <text x="264" y="128" text-anchor="end" font-size="13" fill="#1f1f1f">跨阶段污点传播</text>
+    <rect x="280" y="112" width="580" height="15" fill="#1677ff" rx="2"/>
+    <text x="870" y="124" font-size="12" fill="#1677ff">100%</text>
+    <rect x="280" y="130" width="0" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="290" y="142" font-size="12" fill="#cf1322" font-weight="bold">0%</text>
+    <text x="264" y="142" text-anchor="end" font-size="11" fill="#8c8c8c">异常任务链</text>
+  </g>
+
+  <!-- 行 2：检索层片段过滤 -->
+  <g>
+    <text x="264" y="180" text-anchor="end" font-size="13" fill="#1f1f1f">检索层片段过滤</text>
+    <rect x="280" y="164" width="155" height="15" fill="#1677ff" rx="2"/>
+    <text x="445" y="176" font-size="12" fill="#1677ff">26.7%</text>
+    <rect x="280" y="182" width="0" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="290" y="194" font-size="12" fill="#cf1322" font-weight="bold">0%</text>
+    <text x="264" y="194" text-anchor="end" font-size="11" fill="#8c8c8c">间接注入</text>
+  </g>
+
+  <!-- 行 3：结果敏感信息脱敏 -->
+  <g>
+    <text x="264" y="232" text-anchor="end" font-size="13" fill="#1f1f1f">结果敏感信息脱敏</text>
+    <rect x="280" y="216" width="522" height="15" fill="#1677ff" rx="2"/>
+    <text x="812" y="228" font-size="12" fill="#1677ff">90.0%</text>
+    <rect x="280" y="234" width="0" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="290" y="246" font-size="12" fill="#cf1322" font-weight="bold">0%</text>
+    <text x="264" y="246" text-anchor="end" font-size="11" fill="#8c8c8c">工具结果泄露</text>
+  </g>
+
+  <!-- 行 4：工具注册表校验 -->
+  <g>
+    <text x="264" y="284" text-anchor="end" font-size="13" fill="#1f1f1f">工具注册表校验</text>
+    <rect x="280" y="268" width="580" height="15" fill="#1677ff" rx="2"/>
+    <text x="870" y="280" font-size="12" fill="#1677ff">100%</text>
+    <rect x="280" y="286" width="0" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="290" y="298" font-size="12" fill="#cf1322" font-weight="bold">0%</text>
+    <text x="264" y="298" text-anchor="end" font-size="11" fill="#8c8c8c">越权调用</text>
+  </g>
+
+  <!-- 行 5：统计特征检测 -->
+  <g>
+    <text x="264" y="336" text-anchor="end" font-size="13" fill="#1f1f1f">统计特征检测</text>
+    <rect x="280" y="320" width="580" height="15" fill="#1677ff" rx="2"/>
+    <text x="870" y="332" font-size="12" fill="#1677ff">100%</text>
+    <rect x="280" y="338" width="0" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="290" y="350" font-size="12" fill="#cf1322" font-weight="bold">0%</text>
+    <text x="264" y="350" text-anchor="end" font-size="11" fill="#8c8c8c">投毒填充</text>
+  </g>
+
+  <!-- 行 6：输入归一化（未归零） -->
+  <g>
+    <text x="264" y="388" text-anchor="end" font-size="13" fill="#1f1f1f">输入归一化</text>
+    <rect x="280" y="372" width="456" height="15" fill="#1677ff" rx="2"/>
+    <text x="746" y="384" font-size="12" fill="#1677ff">78.6%</text>
+    <rect x="280" y="390" width="331" height="15" fill="#d9d9d9" rx="2"/>
+    <text x="621" y="402" font-size="12" fill="#8c8c8c">57.1%</text>
+    <text x="264" y="402" text-anchor="end" font-size="11" fill="#8c8c8c">变形与编码绕过</text>
+  </g>
+
+  <!-- 分隔 -->
+  <line x1="40" y1="420" x2="900" y2="420" stroke="#f0f0f0" stroke-width="1"/>
+
+  <!-- 说明 -->
+  <text x="40" y="442" font-size="11.5" fill="#8c8c8c">注：前五行关闭后归零，说明对应机制是守住该缺口的唯一手段；</text>
+  <text x="40" y="460" font-size="11.5" fill="#8c8c8c">输入归一化未归零，因部分变形样例在原文层面仍含可被基础词库命中的词汇，符合预期（详见报告 4.7 节）。</text>
+</svg>
