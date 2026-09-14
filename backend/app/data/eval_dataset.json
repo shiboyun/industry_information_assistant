@@ -1,0 +1,8 @@
+[
+  {
+    "id": "q_001",
+    "question": "如何解决dify_setups表不存在的问题？",
+    "ground_truth": "执行数据库迁移命令创建dify_setups表",
+    "oracle_chunk": "dify_setups表用于存储系统配置信息，若不存在需运行`python manage.py migrate`命令创建。"
+  }
+]

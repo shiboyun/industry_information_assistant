@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+frontend/dist/
+
+# Langfuse (third-party)
+langfuse/
+
+# Cache
+.cache/
+*.cache
+USER_ACTION.md
+
+# 安全运行时产物
+logs/
+data/security_sandbox/
+data/knowledge_quarantine/
+
+# 体积大或涉及第三方版权的素材，不纳入公开仓库
+# （4 份研报 PDF 与测试用 xlsx 另行提供）
+*.pdf
+*.xlsx
+
+.git.old/
+
+# 评测数据集与结果均为构建产物，可由脚本重建（见 README_SECURITY.md 附录）
+# 不入库的原因之一：数据集中含用于测试脱敏规则、形态逼真的示例令牌，
+# 会被 GitHub 推送保护误判为密钥泄漏。
+backend/app/data/security_eval_dataset.json
+backend/app/data/external_eval_dataset.json
+backend/app/data/security_eval_result.json
+backend/app/data/ablation_result.json

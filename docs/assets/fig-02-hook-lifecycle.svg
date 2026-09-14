@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650">
+  <rect width="1400" height="650" fill="#fbfcfe"/>
+  <text x="700" y="45" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="28" font-weight="700" fill="#172033">安全 Hook 生命周期与决策点</text>
+  <text x="700" y="76" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="15" fill="#5c677d">每一阶段都可以独立接入不同智能体、编排框架或业务平台</text>
+
+  <g font-family="Microsoft YaHei, SimHei, Arial">
+    <rect x="60" y="160" width="215" height="190" rx="12" fill="#e8f1ff" stroke="#4677c7" stroke-width="2"/>
+    <text x="167" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#204b8f">1 输入 Hook</text>
+    <text x="88" y="247" font-size="16" fill="#27364d">检查用户问题</text>
+    <text x="88" y="276" font-size="16" fill="#27364d">识别越狱与注入</text>
+    <text x="88" y="305" font-size="16" fill="#27364d">决定放行或阻断</text>
+
+    <rect x="315" y="160" width="215" height="190" rx="12" fill="#e8f7f3" stroke="#2c9b87" stroke-width="2"/>
+    <text x="422" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#176b5c">2 检索 Hook</text>
+    <text x="343" y="247" font-size="16" fill="#27364d">检查召回片段</text>
+    <text x="343" y="276" font-size="16" fill="#27364d">过滤间接指令</text>
+    <text x="343" y="305" font-size="16" fill="#27364d">保留证据与来源</text>
+
+    <rect x="570" y="160" width="215" height="190" rx="12" fill="#fff4df" stroke="#d28a26" stroke-width="2"/>
+    <text x="677" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#8a5513">3 工具前置 Hook</text>
+    <text x="598" y="247" font-size="16" fill="#27364d">参数与角色校验</text>
+    <text x="598" y="276" font-size="16" fill="#27364d">风险与任务链分析</text>
+    <text x="598" y="305" font-size="16" fill="#27364d">审批、放行或阻断</text>
+
+    <rect x="825" y="160" width="215" height="190" rx="12" fill="#f0eaff" stroke="#7659bd" stroke-width="2"/>
+    <text x="932" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#4e3b83">4 结果 Hook</text>
+    <text x="853" y="247" font-size="16" fill="#27364d">检查执行结果</text>
+    <text x="853" y="276" font-size="16" fill="#27364d">敏感信息脱敏</text>
+    <text x="853" y="305" font-size="16" fill="#27364d">形成结果证据</text>
+
+    <rect x="1080" y="160" width="260" height="190" rx="12" fill="#172033" stroke="#172033" stroke-width="2"/>
+    <text x="1210" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">5 审计与验证</text>
+    <text x="1111" y="247" font-size="16" fill="#d9e3f5">统一 trace_id</text>
+    <text x="1111" y="276" font-size="16" fill="#d9e3f5">事件哈希链</text>
+    <text x="1111" y="305" font-size="16" fill="#d9e3f5">完整性验证与回放</text>
+  </g>
+
+  <g stroke="#5c677d" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M275 255 H315"/>
+    <path d="M530 255 H570"/>
+    <path d="M785 255 H825"/>
+    <path d="M1040 255 H1080"/>
+  </g>
+  <path d="M1210 350 V455 H167 V350" stroke="#8e9ab0" stroke-width="2" stroke-dasharray="8 7" fill="none" marker-end="url(#arrow2)"/>
+  <text x="690" y="492" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="17" fill="#5c677d">同一 trace 可跨多个阶段持续累积风险、证据和处置结果</text>
+
+  <rect x="230" y="535" width="940" height="55" rx="8" fill="#eef2f7"/>
+  <text x="700" y="570" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="16" fill="#27364d">统一接口：stage + payload + trace_id + metadata → decision / risk / evidence / sanitized_payload</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5c677d"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8e9ab0"/>
+    </marker>
+  </defs>
+</svg>

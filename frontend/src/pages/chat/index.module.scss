@@ -1,0 +1,57 @@
+// ============================================
+// Premium Design System - Chat Page
+// ============================================
+
+.chat-page {
+  padding: 32px 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .chat-page__header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+
+    .chat-page__header-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+// 注意：:global() 选择器下不能使用 &__suffix 嵌套（sass 会报
+// "Selector :global(...) can't have a suffix"），必须写完整的全局选择器。
+:global(.report-delivery-card) {
+  width: min(720px, 100%);
+  margin: 0 auto 16px;
+}
+
+:global(.report-delivery-card__status) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.research-process-container {
+  flex-shrink: 0;
+  width: 280px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 18px;
+}

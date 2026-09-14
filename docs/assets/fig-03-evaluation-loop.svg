@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#fbfcfe"/>
+  <text x="700" y="46" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="28" font-weight="700" fill="#172033">评测与持续优化闭环</text>
+  <text x="700" y="78" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="15" fill="#5c677d">从攻击样例、业务样例到可复现指标和策略迭代</text>
+
+  <g font-family="Microsoft YaHei, SimHei, Arial">
+    <rect x="80" y="160" width="300" height="170" rx="12" fill="#e8f1ff" stroke="#4677c7" stroke-width="2"/>
+    <text x="230" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#204b8f">样例与数据集</text>
+    <text x="112" y="247" font-size="16" fill="#27364d">正常任务</text>
+    <text x="112" y="276" font-size="16" fill="#27364d">提示注入、RAG 投毒</text>
+    <text x="112" y="305" font-size="16" fill="#27364d">工具越权、敏感外发</text>
+
+    <rect x="550" y="110" width="300" height="170" rx="12" fill="#e8f7f3" stroke="#2c9b87" stroke-width="2"/>
+    <text x="700" y="155" text-anchor="middle" font-size="22" font-weight="700" fill="#176b5c">运行时 Hook</text>
+    <text x="582" y="197" font-size="16" fill="#27364d">输入、检索、工具、结果</text>
+    <text x="582" y="226" font-size="16" fill="#27364d">放行、阻断、审批、脱敏</text>
+    <text x="582" y="255" font-size="16" fill="#27364d">记录 trace 与证据</text>
+
+    <rect x="1020" y="160" width="300" height="170" rx="12" fill="#fff4df" stroke="#d28a26" stroke-width="2"/>
+    <text x="1170" y="205" text-anchor="middle" font-size="22" font-weight="700" fill="#8a5513">指标计算</text>
+    <text x="1052" y="247" font-size="16" fill="#27364d">识别率、误报率、漏报率</text>
+    <text x="1052" y="276" font-size="16" fill="#27364d">阻断效果、业务可用性</text>
+    <text x="1052" y="305" font-size="16" fill="#27364d">延迟、审计完整性</text>
+
+    <rect x="550" y="430" width="300" height="170" rx="12" fill="#f0eaff" stroke="#7659bd" stroke-width="2"/>
+    <text x="700" y="475" text-anchor="middle" font-size="22" font-weight="700" fill="#4e3b83">对照与消融</text>
+    <text x="582" y="517" font-size="16" fill="#27364d">无 Hook 基线</text>
+    <text x="582" y="546" font-size="16" fill="#27364d">仅 RAG 防护</text>
+    <text x="582" y="575" font-size="16" fill="#27364d">RAG + Tool + Audit</text>
+  </g>
+
+  <g stroke="#5c677d" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M380 245 H550"/>
+    <path d="M850 195 H1020"/>
+    <path d="M1170 330 V430 H850"/>
+    <path d="M550 515 H380 V330"/>
+  </g>
+  <text x="700" y="680" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="17" fill="#5c677d">当前已完成：92 条业务样例、决策通过 92 条、重复执行数 0、哈希链验证通过、审计字段完整率 1.0</text>
+  <text x="700" y="713" text-anchor="middle" font-family="Microsoft YaHei, SimHei, Arial" font-size="15" fill="#8a5513">[待补实测] 真实场景攻击识别率、误报率、延迟开销和 RAG 质量变化</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5c677d"/>
+    </marker>
+  </defs>
+</svg>
